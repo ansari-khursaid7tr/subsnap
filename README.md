@@ -1,5 +1,7 @@
 # subsnap
 
+![Project Logo](static/image.jpg)
+
 ## Table of Contents
 
 - [About](#about)
