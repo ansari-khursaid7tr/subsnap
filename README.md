@@ -1,6 +1,6 @@
 # subsnap
 
-![Project Logo](static/image.jpg)
+![Project Logo](static/image.png)
 
 ## Table of Contents
 
