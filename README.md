@@ -71,9 +71,9 @@ Subdomain takeover is a significant security risk that can allow attackers to hi
 
 ## Usage
 
-Run Subsnap with the following command: ./subsnap.sh -d example.com
+Run Subsnap with the following command: ```bash ./subsnap.sh -d example.com ```
 
-For more options, use the help command: ./subsnap.sh -h
+For more options, use the help command: ```bash ./subsnap.sh -h ```
 
 ## Contributing
 
