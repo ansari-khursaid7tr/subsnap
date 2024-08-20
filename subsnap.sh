@@ -196,17 +196,17 @@ main() {
     grep_output="../${output_dir}/specific_cname_patterns.txt"
     {
         echo "    [->] Checking for Github Pages:"
-        grep -E "github" "$cname_output"
+        grep -E ".github.io" "$cname_output"
         echo "    [->] Checking for Amazon S3:"
         grep -E '.s3.amazonaws.com' "$cname_output"
         grep -E '.s3-website' "$cname_output"
-        grep -E '.s3' "$cname_output"
+        grep -E '.s3.' "$cname_output"
         echo
         echo "    [->] Checking for Heroku:"
-        grep -E 'herokudns' "$cname_output"
+        grep -E '.herokudns.' "$cname_output"
         echo
         echo "    [->] Checking for ReadMe.io:"
-        grep -E 'readme' "$cname_output"
+        grep -E '.readme.io' "$cname_output"
     } > "$grep_output"
 
     if [ -s "$grep_output" ]; then
@@ -219,8 +219,8 @@ main() {
     # Step 9: Capture Screenshots
     if [ "$skip_screenshots" = false ]; then
         echo -e "\033[1;34m[*] Capturing screenshots with Eyewitness...\033[0m"
-        eyewitness -f "$alive_output" -d "$output_dir/screenshots" --timeout "$timeout" > /dev/null 2>&1
-        echo -e "\033[1;32m[+] Screenshots captured and saved in $output_dir/screenshots\033[0m"
+        eyewitness -f "$alive_output" -d "../$output_dir/screenshots" --timeout "$timeout" > /dev/null 2>&1
+        echo -e "\033[1;32m[+] Screenshots captured and saved in ../$output_dir/screenshots\033[0m"
     else
         echo -e "\033[1;32m[-] Skipping screenshot capture step\033[0m"
     fi
